@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card, Button } from 'react-bootstrap';
 
 class Resultpage extends Component {
     constructor(props) {
@@ -32,15 +33,23 @@ class Resultpage extends Component {
           return (
             <div>
               {users.map(user => (
-                <p key={user.id}>
-                  <img src={`https://avatars.dicebear.com/v2/avataaars/${user.username}.svg?options[mood][]=happy`}/>
-                  <h1>{user.name}</h1>
-                  <h2>Email:{user.email}</h2>
-                  <h2>Phone:{user.phone}</h2>
-                  <h2>Company:{user.company.name}</h2>
-                  <h2>Website:{user.website}</h2>
-                  <h2>Address:{user.address.street},{user.address.suite},{user.address.city},{user.address.zipcode}</h2>
-                </p>
+                <div className="container" key={user.id}>
+                  <div className="ec-card">
+                  <div className="row">  
+                  <div className="col-md-3 col-sm-4">
+                  <img className="avtar" src={`https://avatars.dicebear.com/v2/avataaars/${user.username}.svg?options[mood][]=happy`}/>
+                  </div>
+                  <div className="col-md-9 col-sm-8">
+                  <h2>{user.name}</h2>
+                  <p><strong>Email:</strong>{user.email}</p>
+                  <p><strong>Phone:</strong>{user.phone}</p>
+                  <p><strong>Company:</strong>{user.company.name}</p>
+                  <p><strong>Website:</strong>{user.website}</p>
+                  <p><strong>Address:</strong>{user.address.street},{user.address.suite},{user.address.city},{user.address.zipcode}</p>
+                </div>
+                </div>
+                </div>
+                </div>
               ))}
             </div>
           );

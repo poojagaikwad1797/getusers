@@ -14,4 +14,4 @@ URL: https://jsonplaceholder.typicode.com/users
 http://tobiasahlin.com/spinkit/
 
 # Assignment live link
-https://60f2cab0b66d4be84303c81d--creatorsclubassignment.netlify.app/
+https://creatorsclubassignment.netlify.app/
